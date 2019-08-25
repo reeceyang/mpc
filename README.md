@@ -1,4 +1,4 @@
-# mpc
+# MIT Music Production Collaborative
 
 ```bash
 echo MIT username:
