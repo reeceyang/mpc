@@ -380,9 +380,9 @@ header h6 + p {
   header br {
     display: none; } }
 
-@media screen and (max-width: 736px) {
+/*@media screen and (max-width: 736px) {
   header br {
-    display: inline; } }
+    display: inline; } }*/
 
 @media screen and (max-width: 480px) {
   header br {
@@ -839,6 +839,18 @@ button,
   color: #BBB; }
   #content a:hover {
     color: #028294 !important; }
+
+@media screen and (max-width: 980px) {
+  #content br {
+    display: none; } }
+
+/*@media screen and (max-width: 736px) {
+  #content br {
+    display: inline; } }*/
+
+@media screen and (max-width: 480px) {
+  #content br {
+    display: none; } }
 
 /* Footer */
 #footer {
