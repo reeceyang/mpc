@@ -170,7 +170,7 @@
 
 							// Show message.
 								if (signupSuccess) {
-									$message._show('success', 'Join through webmoira or email mit-mpc-exec@mit.edu');
+									$message._show('success', 'Join through webmoira or email us.');
 								} else {
 									$message._show('failure', 'Please email us to join.');
 								}
