@@ -1,7 +1,7 @@
 # MIT Music Production Collaborative
 
 1. Test your changes locally
-2. Commit changes to this repository `https://github.com/richardliutl/mpc.git`
+2. Commit and push changes to this repository `https://github.com/richardliutl/mpc.git`
 3. Run `update.sh` to make http://mpc.mit.edu/ up-to-date with this repo.
 
 ```bash
