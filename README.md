@@ -21,9 +21,9 @@ Pipeline for repo (travis-ci?)
   * Contact form
   * Mailing list signup
   * EP (tbd. soundcloud/spotify embed)
-  * About - Social media links
+  * config file (webmoira link, mpc dir)
 * Low
-  * Exec page (headshots)
+  * Exec page (headshots, socials embeds)
 
 
 ## Notes
