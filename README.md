@@ -10,6 +10,9 @@ read user
 ssh -t $user@athena.dialup.mit.edu '
     cd /mit/mpc/web_scripts/site;
     svn update;
+    cd /mit/mpc/web_scripts/site/blog;
+    python3 blog.py;
+    cd /mit/mpc/web_scripts/site;
     bash -l
 '
 ```
@@ -17,13 +20,14 @@ ssh -t $user@athena.dialup.mit.edu '
 ## TODO
 Pipeline for repo (travis-ci?)
 * High
-  * Figure out MIT hosting
   * Contact form
-  * Mailing list signup
   * EP (tbd. soundcloud/spotify embed)
   * config file (webmoira link, mpc dir)
 * Low
   * Exec page (headshots, socials embeds)
+* Done
+  * Figure out MIT hosting
+  * Mailing list signup (manually)
 
 
 ## Notes
@@ -33,4 +37,13 @@ To set this up (only needs to be done once at repository creation), associate th
 ```bash
 cd  /mit/mpc/web_scripts/
 svn checkout https://github.com/richardliutl/mpc/trunk/site
+```
+
+To set up tooling (pandoc) run tools.sh
+
+```bash
+cd /mit/mpc/web_scripts;
+mkdir -p tools;
+wget -qO- https://github.com/jgm/pandoc/releases/download/2.11.0.4/pandoc-2.11.0.4-linux-amd64.tar.gz | tar xvzf - --strip-components 1 -C ./tools/;
+bash -l
 ```
