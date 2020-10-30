@@ -1181,7 +1181,7 @@ html {
 body {
   background-color: #18191A;
 
-  color: #333639;
+  color: #E4E5E6;
   font-family: Roboto, sans-serif;;
   font-size: 1.8rem;
   font-weight: 300;
@@ -2566,7 +2566,7 @@ textarea {
 }
 
 .Archive-title a {
-  color: #333639;
+  color: #E4E5E6;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -2629,7 +2629,7 @@ textarea {
 .Archive-postDate {
   -ms-flex-align: center;
   align-items: center;
-  color: #333639;
+  color: #E4E5E6;
   display: -ms-flexbox;
   display: flex;
   font-size: .75em;
