@@ -1229,7 +1229,7 @@ h6 {
   font-weight: 400;
   margin: 1.5em 0 .8em;
   line-height: 1.2em;
-  color: #111
+  color: #fff
 }
 
 h2 {
@@ -1238,7 +1238,7 @@ h2 {
 
 b,
 strong {
-  font-weight: 400
+  font-weight: 800
 }
 
 h1 {

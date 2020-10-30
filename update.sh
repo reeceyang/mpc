@@ -5,11 +5,16 @@ ssh -t $user@athena.dialup.mit.edu '
     svn update;
     cd blog;
     unzip -o \*.zip;
+    links="# links:\n"
     for f in formatted\ for\ website/*.docx;
-        do fname=$(basename "$f" .docx);
-        python3 blog.py bb -t "$f";
+        do basefname=$(basename "$f" .docx);
+        python3 blog.py bb -t "$basefname";
+        fname="${basefname// /}"
         /mit/mpc/web_scripts/tools/bin/pandoc -s -c ../assets/css/blog.css -B beforebody.html "$f" -o "$fname".html;
+        links="${links} * [http://mpc.mit.edu/blog/$fname.html](http://mpc.mit.edu/blog/$fname.html)\n";
     done;
+    echo -e "${links}" > links.md;
+    /mit/mpc/web_scripts/tools/bin/pandoc -s -c ../assets/css/blog.css links.md -o links.html;
     bash -l
 '
 
