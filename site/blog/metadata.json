@@ -1,6 +1,5 @@
 {
     "author": {
-        "??": "??",
         "CM": "Carina Masuelli",
         "CS": "Christian Scarlett",
         "KN": "Karthik Nair",
@@ -8,10 +7,6 @@
         "RL": "Richard Liu"
     },
     "title": {
-        "*": {
-            "author": "??",
-            "title": "*"
-        },
         "An Interview with Ashika Verma of MIT_s Ohms": {
             "author": "CS",
             "title": "An Interview with Ashika Verma of MIT's Ohms"
@@ -28,9 +23,9 @@
             "author": "CM",
             "title": "Lenseye: \u201cA Name to Remember\u201d"
         },
-        "MPC_s October 2020 Playlist": {
+        "MPC_s November 2020 Playlist": {
             "author": "NA",
-            "title": "MPC's October 2020 Playlist"
+            "title": "MPC's November 2020 Playlist"
         }
     }
 }

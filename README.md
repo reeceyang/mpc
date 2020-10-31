@@ -24,6 +24,7 @@ Pipeline for repo (travis-ci?)
 * Low
   * Replace all python with lua filter
   * Exec page (headshots, socials embeds)
+  * Figure out https://scripts.mit.edu/faq/41/
 * Done
   * Figure out MIT hosting
   * Mailing list signup (manually)
