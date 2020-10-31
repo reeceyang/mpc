@@ -1,6 +1,7 @@
 import click
 import os
 import re
+import parse
 
 @click.group()
 def cli():
@@ -88,6 +89,7 @@ def generate_beforebody(title):
 @cli.command(name='bb')
 @click.option('-t', '--title')
 def write_beforebody(title):
+    title = parse.lookup_title(title)
     result = generate_beforebody(title)
 
     f = open("beforebody.html", "w")
