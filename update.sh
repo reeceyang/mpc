@@ -3,7 +3,7 @@ read user
 ssh -t $user@athena.dialup.mit.edu '
     cd /mit/mpc/web_scripts/site;
     svn update;
-    source /mit/mpc/web_scripts/site/blogger.sh;
+    source /mit/mpc/web_scripts/site/blog/blogger.sh;
     bash -l
 '
 
