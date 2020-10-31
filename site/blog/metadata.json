@@ -1,5 +1,6 @@
 {
     "author": {
+        "??": "??",
         "CM": "Carina Masuelli",
         "CS": "Christian Scarlett",
         "KN": "Karthik Nair",
@@ -7,6 +8,10 @@
         "RL": "Richard Liu"
     },
     "title": {
+        "*": {
+            "author": "??",
+            "title": "*"
+        },
         "An Interview with Ashika Verma of MIT_s Ohms": {
             "author": "CS",
             "title": "An Interview with Ashika Verma of MIT's Ohms"

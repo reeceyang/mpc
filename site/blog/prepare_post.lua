@@ -75,13 +75,29 @@ if FORMAT:match 'html' then
     end
     return elem
   end
-end
 
--- -- Filter images with this function if the target format is HTML
--- if FORMAT:match 'html' then
---   function Image (elem)
---     -- Use CSS style to center image
---     elem.attributes.style = 'margin:auto; display: block;'
---     return elem
---   end
--- end
+  -- https://stackoverflow.com/questions/9168058/how-to-dump-a-table-to-console
+  function dump(o)
+     if type(o) == 'table' then
+        local s = '{ '
+        for k,v in pairs(o) do
+           if type(k) ~= 'number' then k = '"'..k..'"' end
+           s = s .. '['..k..'] = ' .. dump(v) .. ','
+        end
+        return s .. '} '
+     else
+        return tostring(o)
+     end
+  end
+
+  function Image (elem)
+    -- Use object-fit style to align image with screen size
+    local vars = {
+      width = elem.attributes['width'],
+      height = elem.attributes['height']
+    }
+    elem.attributes.style = interp('width:${width}; height:${height}; object-fit: contain;', vars)
+    -- elem.caption = {pandoc.Str "Hello, World"}
+    return elem
+  end
+end

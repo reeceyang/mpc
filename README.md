@@ -7,12 +7,10 @@
 ```bash
 echo MIT username:
 read user
-ssh -t $user@athena.dialup.mit.edu '
+ssh -Kt $user@athena.dialup.mit.edu '
     cd /mit/mpc/web_scripts/site;
     svn update;
-    cd /mit/mpc/web_scripts/site/blog;
-    python3 blog.py;
-    cd /mit/mpc/web_scripts/site;
+    /mit/mpc/web_scripts/site/blog/blogger.sh;
     bash -l
 '
 ```
@@ -25,7 +23,6 @@ Pipeline for repo (travis-ci?)
   * config file (webmoira link, mpc dir)
 * Low
   * Replace all python with lua filter
-  * Make blogger.sh fs-agnostic
   * Exec page (headshots, socials embeds)
 * Done
   * Figure out MIT hosting
