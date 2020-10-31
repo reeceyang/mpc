@@ -24,6 +24,8 @@ Pipeline for repo (travis-ci?)
   * EP (tbd. soundcloud/spotify embed)
   * config file (webmoira link, mpc dir)
 * Low
+  * Replace all python with lua filter
+  * Make blogger.sh fs-agnostic
   * Exec page (headshots, socials embeds)
 * Done
   * Figure out MIT hosting

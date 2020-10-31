@@ -1537,6 +1537,24 @@ input[type=checkbox] {
   height: 2rem
 }
 
+.Header-author {
+  color: hsla(0, 0%, 100%, .75);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1em;
+  margin-top: 1rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center
+}
+
+@media (min-width:600px) {
+  .Header-author {
+    font-size: 1.8rem
+  }
+}
+
 .Header-about {
   color: hsla(0, 0%, 100%, .5);
   margin: 0;

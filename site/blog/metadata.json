@@ -1,0 +1,31 @@
+{
+    "author": {
+        "CM": "Carina Masuelli",
+        "CS": "Christian Scarlett",
+        "KN": "Karthik Nair",
+        "NA": "Nithya Attaluri",
+        "RL": "Richard Liu"
+    },
+    "title": {
+        "An Interview with Ashika Verma of MIT_s Ohms": {
+            "author": "CS",
+            "title": "An Interview with Ashika Verma of MIT's Ohms"
+        },
+        "An Interview with Lenseye": {
+            "author": "CM",
+            "title": "An Interview with Lenseye"
+        },
+        "How To Discover New Music": {
+            "author": "KN",
+            "title": "How To Discover New Music"
+        },
+        "Lenseye_ \u201cA Name to Remember\u201d": {
+            "author": "CM",
+            "title": "Lenseye: \u201cA Name to Remember\u201d"
+        },
+        "MPC_s October 2020 Playlist": {
+            "author": "NA",
+            "title": "MPC's October 2020 Playlist"
+        }
+    }
+}

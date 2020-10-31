@@ -89,12 +89,27 @@ def generate_beforebody(title):
 @cli.command(name='bb')
 @click.option('-t', '--title')
 def write_beforebody(title):
-    title = parse.lookup_title(title)
+    title = parse.lookup_metadata(title)['title']
     result = generate_beforebody(title)
 
     f = open("beforebody.html", "w")
     f.write(result)
     f.close()
+
+    print(title)
+
+@cli.command(name='lt')
+@click.option('-t', '--title')
+def lookup_title(title):
+    meta = parse.lookup_metadata(title)
+    print(meta['title'])
+
+@cli.command(name='la')
+@click.option('-t', '--title')
+def lookup_author(title):
+    meta = parse.lookup_metadata(title)
+    author = parse.lookup_author(meta['author'])
+    print(author)
 
 @cli.command(name='posts')
 def do_all_posts():

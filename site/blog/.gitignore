@@ -1,0 +1,4 @@
+# blogger.sh temp files
+__pycache__/
+media/
+*.html
