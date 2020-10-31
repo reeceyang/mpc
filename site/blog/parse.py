@@ -13,7 +13,7 @@ def open_file(path):
 
 def save_json(file, path):
     with open(path, 'w', encoding='utf-8') as f:
-        json.dump(file, f)
+        json.dump(file, f, indent=4, sort_keys=True)
 
 def open_json(path):
     with open(path, 'r') as f:
