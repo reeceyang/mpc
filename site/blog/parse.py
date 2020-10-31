@@ -25,7 +25,12 @@ def print_json(parsed):
 def lookup_title(title):
     # Retrieve the appropriate title (dict may be manually modified to correct titles)
     # Generate entry title->title in dict if does not exist
-    meta = open_json('metadata.json')
+    meta = dict()
+    try:
+        meta = open_json('metadata.json')
+    except FileNotFoundError:
+        # doesn't exist
+        meta = dict()
     if title in meta['title']:
         return meta['title'][title]
     else:
