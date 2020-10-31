@@ -31,7 +31,7 @@ def lookup_title(title):
     except FileNotFoundError:
         # doesn't exist
         meta = dict()
-    if title in meta['title']:
+    if 'title' in meta and title in meta['title']:
         return meta['title'][title]
     else:
         if 'title' not in meta:
