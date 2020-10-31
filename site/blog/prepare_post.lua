@@ -37,7 +37,7 @@ local header_template = [[
    <div class="Post Container">
 ]]
 
-local vars = {
+local metavars = {
     imagePath = "",
     homePath = "..",
     title = "lorem ipsum",
@@ -50,22 +50,22 @@ end
 -- Passing information from a higher level (e.g., metadata)
 function Meta (meta)
     for k, v in pairs(meta) do
-        vars[k] = v
+        metavars[k] = v
     end
 end
 
--- Append header template
-function Pandoc (doc)
-    local meta = doc.meta
-    local blocks = doc.blocks
-    -- Replacing placeholders with their metadata value using interp
-    blocks:insert(1, pandoc.RawBlock('html', interp(header_template, vars) ))
-    pandoc.walk_block(doc.blocks[1], {replace})
-    return pandoc.Pandoc(blocks, meta)
-end
-
--- Filter Para with this function if the target format is HTML
+-- Filter with these function if the target format is HTML
 if FORMAT:match 'html' then
+  -- Append header template
+  function Pandoc (doc)
+      local meta = doc.meta
+      local blocks = doc.blocks
+      -- Replacing placeholders with their metadata value using interp
+      blocks:insert(1, pandoc.RawBlock('html', interp(header_template, metavars) ))
+      pandoc.walk_block(doc.blocks[1], {replace})
+      return pandoc.Pandoc(blocks, meta)
+  end
+
   function Para (elem)
     -- If Para starts with iframe tag, escape the Para to render content correctly
     local content = pandoc.utils.stringify(elem.content)
@@ -99,5 +99,33 @@ if FORMAT:match 'html' then
     elem.attributes.style = interp('width:${width}; height:${height}; object-fit: contain;', vars)
     -- elem.caption = {pandoc.Str "Hello, World"}
     return elem
+  end
+end
+
+-- Filter Para with this function if the target format is markdown
+if FORMAT:match 'markdown' then
+  local function is_caption_after_image(cap, img)
+    return cap and cap.t == 'Para'
+      and img and img.t == 'Para'
+      -- there must be only a single img content val, and it must have
+      -- tag 'Image'
+      and #img.content == 1
+      and img.content[1].t == 'Image'
+  end
+
+  function Pandoc (doc)
+    -- Go from end to start to avoid problems with shifting indices.
+    local blocks = doc.blocks
+    for i = #blocks, 2, -1 do
+      if is_caption_after_image(blocks[i], blocks[i-1]) then
+        -- sets caption
+        blocks[i-1].content[1].caption = blocks[i].content
+        -- sets dimensions
+        blocks[i-1].content[1].attributes['width'] = '100%'
+        blocks[i-1].content[1].attributes['height'] = '100%'
+        blocks:remove(i)
+      end
+    end
+    return doc
   end
 end

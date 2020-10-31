@@ -1,6 +1,7 @@
 # blogger.sh temp files
 __pycache__/
 media-*/
+formatted*/
 
 # static generation
 *.html

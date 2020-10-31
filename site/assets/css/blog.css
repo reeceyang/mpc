@@ -237,6 +237,11 @@ textarea {
   font: inherit
 }
 
+figure figcaption {
+  font-size: small;
+  text-align: center;
+}
+
 figure.highlight pre.lineno {
   color: #b4b5b6;
   margin-right: 1.5rem
