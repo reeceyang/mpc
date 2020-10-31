@@ -1,5 +1,5 @@
 cd "$(dirname "$0")"
-pandoc="$(pwd)"/../../../tools/bin/pandoc
+pandoc="$(pwd)"/../../tools/bin/pandoc
 unzip -o \*.zip;
 links="# links:\n"
 for f in formatted\ for\ website/*.docx;

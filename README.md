@@ -38,11 +38,9 @@ cd  /mit/mpc/web_scripts/
 svn checkout https://github.com/richardliutl/mpc/trunk/site
 ```
 
-To set up tooling (pandoc) run tools.sh
+To set up tooling (pandoc) run tools.sh. Should be set up so that /tools and /site are siblings.
 
 ```bash
-cd /mit/mpc/web_scripts;
 mkdir -p tools;
 wget -qO- https://github.com/jgm/pandoc/releases/download/2.11.0.4/pandoc-2.11.0.4-linux-amd64.tar.gz | tar xvzf - --strip-components 1 -C ./tools/;
-bash -l
 ```
