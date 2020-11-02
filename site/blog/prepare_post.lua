@@ -1,16 +1,18 @@
-local header_template_default = [[
+local html_template = [[
 <!DOCTYPE html>
 <html lang="en-us" style="" class=" no-touchevents">
-   <head>
-      <meta charset="utf-8" />
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
-      <title>${title} - MIT MPC</title>
-      <link rel="stylesheet" href="${homePath}/assets/css/blog.css">
-   </head>
-   <body class="Body--post">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+  <title>${title} - MIT MPC</title>
+  <link rel="stylesheet" href="${homePath}/assets/css/blog.css">
+</head>
+]]
 
+local header_template_default = [[
+<body class="Body--post">
 <div class="Header">
    <div class="Header-content">
       <div class="Header-top">
@@ -39,17 +41,7 @@ local header_template_default = [[
 ]]
 
 local header_template_links = [[
-<!DOCTYPE html>
-<html lang="en-us" style="" class=" no-touchevents">
-   <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
-      <title>${title} - MIT MPC</title>
-      <link rel="stylesheet" href="${homePath}/assets/css/blog.css">
-   </head>
-   <body class="Body--post">
-
+<body class="Body--post">
 <div class="Header">
    <div class="Header-content">
       <div class="Header-top">
@@ -93,7 +85,7 @@ end
 
 -- Filter with these function if the target format is HTML
 if FORMAT:match 'html' then
-  local lightboxes = { }
+  local lightboxes = { 'html' }
   local thumbnail_template = [[
     <!-- The link that, when clicked, will display the image in full screen -->
     <a href="#${id}">
@@ -150,6 +142,7 @@ if FORMAT:match 'html' then
     local blocks = doc.blocks
     -- Replacing placeholders with their metadata value using interp
     local header_template = select_header_template()
+    lightboxes[1] = interp(html_template, metavars)
     lightboxes[#lightboxes+1] = interp(header_template, metavars)
     blocks:insert(1, pandoc.RawBlock('html', table.concat(lightboxes,"\n")))
     pandoc.walk_block(doc.blocks[1], {replace})
