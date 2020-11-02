@@ -13,7 +13,7 @@ for f in formatted\ for\ website/*.docx;
     	--data-dir="media-$fname" --metadata title="$title" --metadata author="$author";
     links="${links} * [$title](http://mpc.mit.edu/blog/$fname.html) by $author\n";
 done;
-echo -e "${links}\nAs we continue to build on this new venture, the structure of future newsletters, as well as our website, are still works in progress. If you are interested in contributing, especially in the form writing any music-related content for future issues, let us know at mit-mpc-exec@mit.edu. If you have any feedback, comments, questions, suggestions etc, we would love to hear them as well.\n\nHave a great week!\n\n\- MPC exec"\
+echo -e "${links}\nAs we continue to build on this new venture, the structure of future newsletters, as well as our website, are still works in progress. If you are interested in contributing, especially in the form of writing any music-related content for future issues, let us know at mit-mpc-exec@mit.edu. If you have any feedback, comments, questions, suggestions etc, we would love to hear them as well.\n\nHave a great week!\n\n\- MPC exec"\
     > links.md;
 $pandoc --lua-filter prepare_post.lua links.md -o NovemberNewsletter.html --metadata title="November Newsletter" --metadata header="links";
 
