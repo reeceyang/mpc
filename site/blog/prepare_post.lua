@@ -109,7 +109,7 @@ if FORMAT:match 'html' then
   ]]
 
   function Image (elem)
-    -- Use object-fit style to align image with screen size
+    -- Updates images to use lightboxes. Source: https://codepen.io/gschier/pen/HCoqh , https://www.sylvaindurand.org/overlay-image-in-pure-css/
     local vars = {
       width = elem.attributes['width'],
       height = 'auto',
