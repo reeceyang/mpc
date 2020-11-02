@@ -3196,6 +3196,46 @@ h5:hover .Post-headerAnchor {
   }
 }
 
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+  /* Default to hidden */
+  visibility: hidden;
+
+  /* Overlay entire screen */
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  
+  /* Horizontal and vertical centering of the image */
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* Translucent background */
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Unhide the lightbox when it's the target */
+.lightbox:target {
+  visibility: visible;
+  outline: none;
+  cursor: default;
+}
+
+.lightbox img {
+  /* Full width and height */
+  max-width: 90%;
+  max-height: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .Code--lg,
 .DualImage,
 .Image--lg {
