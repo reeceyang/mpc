@@ -1,5 +1,6 @@
 {
     "author": {
+        "??": "??",
         "CM": "Carina Masuelli",
         "CS": "Christian Scarlett",
         "KN": "Karthik Nair",
@@ -7,6 +8,10 @@
         "RL": "Richard Liu"
     },
     "title": {
+        "14 Tips for Getting out of a Creative Slump": {
+            "author": "CM",
+            "title": "14 Tips for Getting out of a Creative Slump"
+        },
         "An Interview with Ashika Verma of MIT_s Ohms": {
             "author": "CS",
             "title": "An Interview with Ashika Verma of MIT's Ohms"
@@ -15,9 +20,17 @@
             "author": "CM",
             "title": "An Interview with Lenseye"
         },
+        "Fall 2020 Trackathon Rewind": {
+            "author": "KN",
+            "title": "Fall 2020 Trackathon Rewind"
+        },
         "How To Discover New Music": {
             "author": "KN",
             "title": "How To Discover New Music"
+        },
+        "Interview_ Karthik Nair breaks down his new EP": {
+            "author": "CS",
+            "title": "Interview: Karthik Nair breaks down his new EP"
         },
         "Lenseye_ \u201cA Name to Remember\u201d": {
             "author": "CM",
