@@ -8,6 +8,10 @@
         "RL": "Richard Liu"
     },
     "title": {
+        "*": {
+            "author": "??",
+            "title": "*"
+        },
         "14 Tips for Getting out of a Creative Slump": {
             "author": "CM",
             "title": "14 Tips for Getting out of a Creative Slump"

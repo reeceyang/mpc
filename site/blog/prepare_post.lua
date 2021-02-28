@@ -66,10 +66,19 @@ local header_template_links = [[
    <div class="Post Container">
 ]]
 
+local footer_template_default = [[
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfy82EtnPxNUXrK8aTR_VIYRqdyMPaLXKc9bAIHaxSQ99anOg/viewform?embedded=true&entry.642254772=${title}" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+         </div>
+      </div>
+   </body>
+</html>
+]]
+
 local metavars = {
     imagePath = "",
     homePath = "..",
     title = "lorem ipsum",
+    subject = "lorem-ipsum",
     author = "Karthik Nair"
 }
 function interp(s, tab)
@@ -136,7 +145,7 @@ if FORMAT:match 'html' then
     return header_template_default
   end
 
-  -- Append header template
+  -- Append header, footer templates
   function Pandoc (doc)
     local meta = doc.meta
     local blocks = doc.blocks
@@ -145,6 +154,10 @@ if FORMAT:match 'html' then
     lightboxes[1] = interp(html_template, metavars)
     lightboxes[#lightboxes+1] = interp(header_template, metavars)
     blocks:insert(1, pandoc.RawBlock('html', table.concat(lightboxes,"\n")))
+
+    -- Appending google form footer
+    blocks:insert(#blocks + 1, pandoc.RawBlock('html', interp(footer_template_default, metavars)))
+    
     pandoc.walk_block(doc.blocks[1], {replace})
     return pandoc.Pandoc(blocks, meta)
   end

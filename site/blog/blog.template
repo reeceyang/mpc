@@ -32,6 +32,7 @@
       </div>
          <div class="Post Container">
          	{%emit(post)%}
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfy82EtnPxNUXrK8aTR_VIYRqdyMPaLXKc9bAIHaxSQ99anOg/viewform?embedded=true&entry.642254772=14+Tips+for+Getting+out+of+a+Creative+Slump" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
          </div>
       </div>
    </body>
