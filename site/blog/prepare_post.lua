@@ -155,8 +155,8 @@ if FORMAT:match 'html' then
     lightboxes[#lightboxes+1] = interp(header_template, metavars)
     blocks:insert(1, pandoc.RawBlock('html', table.concat(lightboxes,"\n")))
 
-    -- Appending google form footer
-    blocks:insert(#blocks + 1, pandoc.RawBlock('html', interp(footer_template_default, metavars)))
+    -- -- Appending google form footer
+    -- blocks:insert(#blocks + 1, pandoc.RawBlock('html', interp(footer_template_default, metavars)))
     
     pandoc.walk_block(doc.blocks[1], {replace})
     return pandoc.Pandoc(blocks, meta)
