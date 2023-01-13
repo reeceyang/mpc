@@ -1,0 +1,15 @@
+- name: ALIXI
+  link1text: spotify
+  link1url: https://open.spotify.com/artist/0bzWS6Q4P3c5xDWxL9a1n0
+  link2text: soundcloud
+  link2url: https://soundcloud.com/aliximusic
+  embed: https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1259290315&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true
+  imgsrc: https://i1.sndcdn.com/avatars-Y2bNOcHcHY9pwPWs-1ezxYQ-t500x500.jpg
+
+- name: Ajay
+  link1text: spotify
+  link1url: https://open.spotify.com/artist/69wRLkJGNcTP3IvKoD7aQH?si=4OCr1NksToC8zUyFx3fM_Q
+  link2text: soundcloud
+  link2url: https://soundcloud.com/ajayrora
+  embed: https://open.spotify.com/embed/track/0W7YX5WHRMJOLgZO8mtj0w?utm_source=generator&theme=0
+  imgsrc: https://i1.sndcdn.com/avatars-jStWblJglxMG7XzY-no1Rzw-t500x500.jpg

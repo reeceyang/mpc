@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-us" style="" class=" no-touchevents">
+   <head>
+      <base href="{%emit(imagePath)%}">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+      <title>{%emit(title)%} - MIT MPC</title>
+      <link rel="stylesheet" href="{%emit(homePath)%}/assets/css/blog.css">
+      
+   </head>
+   <body class="Body--post">
+      <div class="Header">
+         <div class="Header-content">
+            <div class="Header-top">
+               <a class="Logo" href="{%emit(homePath)%}/" aria-label="MIT MPC, back to homepage">
+                  <div class="Logo-textBigLetter"> <span aria-hidden="true"> 
+                     MIT Music Production Collaborative
+                  </span> </div> </a>
+               <div class="Menu">
+                  <a class="Menu-link " href="{%emit(homePath)%}/index.html"> About </a>
+                     <span aria-hidden="true">/</span>
+                  <a class="Menu-link " href="{%emit(homePath)%}/news.html"> Archive </a>
+               </div>
+            </div>
+            <h1 class="Header-title Header-title--page" style="transform: translateY(0px); opacity: 1;"> <span aria-hidden="true">
+               {%emit(title)%}
+            </span></h1>
+         </div>
+         <div class="Header-angle Header-angle--left"></div>
+         <div class="Header-angle Header-angle--right"></div>
+      </div>
+         <div class="Post Container">
+         	{%emit(post)%}
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfy82EtnPxNUXrK8aTR_VIYRqdyMPaLXKc9bAIHaxSQ99anOg/viewform?embedded=true&entry.642254772=14+Tips+for+Getting+out+of+a+Creative+Slump" width="640" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+         </div>
+      </div>
+   </body>
+</html>

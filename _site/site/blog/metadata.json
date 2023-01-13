@@ -1,0 +1,70 @@
+{
+    "author": {
+        "??": "??",
+        "AA": "Ajay Arora",
+        "CM": "Carina Masuelli",
+        "CS": "Christian Scarlett",
+        "KN": "Karthik Nair",
+        "ME": "MPC Exec",
+        "NA": "Nithya Attaluri",
+        "RL": "Richard Liu"
+    },
+    "title": {
+        "*": {
+            "author": "??",
+            "title": "*"
+        },
+        "14 Tips for Getting out of a Creative Slump": {
+            "author": "CM",
+            "title": "14 Tips for Getting out of a Creative Slump"
+        },
+        "An Interview with Ashika Verma of MIT_s Ohms": {
+            "author": "CS",
+            "title": "An Interview with Ashika Verma of MIT's Ohms"
+        },
+        "An Interview with Lenseye": {
+            "author": "CM",
+            "title": "An Interview with Lenseye"
+        },
+        "Dorm Room Recording 101_ A Guide to Capturing Quality Audio in a Suboptimal Setting": {
+            "author": "CM",
+            "title": "Dorm Room Recording 101: A Guide to Capturing Quality Audio in a Suboptimal Setting"
+        },
+        "Fall 2020 Trackathon Rewind": {
+            "author": "KN",
+            "title": "Fall 2020 Trackathon Rewind"
+        },
+        "Getting Started with Production_ Anecdotes from MPC Exec": {
+            "author": "ME",
+            "title": "Getting Started with Production: Anecdotes from MPC Exec"
+        },
+        "How To Discover New Music": {
+            "author": "KN",
+            "title": "How To Discover New Music"
+        },
+        "How to Give Constructive Feedback": {
+            "author": "KN",
+            "title": "How to Give Constructive Feedback"
+        },
+        "Interview_ Karthik Nair breaks down his new EP": {
+            "author": "CS",
+            "title": "Interview: Karthik Nair breaks down his new EP"
+        },
+        "Lenseye_ \u201cA Name to Remember\u201d": {
+            "author": "CM",
+            "title": "Lenseye: \u201cA Name to Remember\u201d"
+        },
+        "MPC_s November 2020 Playlist": {
+            "author": "NA",
+            "title": "MPC's November 2020 Playlist"
+        },
+        "Tips for Collaborating Remotely": {
+            "author": "AA",
+            "title": "Tips for Collaborating Remotely"
+        },
+        "Tips for Producing on a Budget": {
+            "author": "CS",
+            "title": "Tips for Producing on a Budget"
+        }
+    }
+}

@@ -1,0 +1,6 @@
+Redirect "/facebook" "https://www.facebook.com/MITMPC"
+Redirect "/youtube" "https://www.youtube.com/channel/UCdNbfFqR2fOmhqspw8TwEQA"
+Redirect "/soundcloud" "https://soundcloud.com/mitmpc"
+Redirect "/email" "mailto:mit-mpc-exec@mit.edu"
+Redirect "/calendar" "https://calendar.google.com/calendar/u/0?cid=cjYzZnRpamgxcDZyNzV1YXNoM3A2MGw2ZzhAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ"
+Redirect "/discord" "https://discord.gg/ayQ8b5N9jh"

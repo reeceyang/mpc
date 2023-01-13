@@ -1,0 +1,85 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>MIT Music Production Collaborative</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+  </head>
+  <body>
+    {% include marquee.html %}
+    <h1>MPC</h1>
+    {% include marquee.html %}
+    <div class="body-wrapper">
+      <nav>
+        <a href="#about">ABOUT</a>✦
+        <a href="#join">JOIN</a>✦
+        <a href="#artists">ARTISTS</a>
+      </nav>
+      <img src="assets/images/showcase1.jpeg" />
+      <span class="anchor" id="about"></span>
+      <h2>ABOUT</h2>
+      <p>
+        We are the MIT Music Production Collaborative. We promote the collaboration, education, and exchange of ideas among MIT
+        community members interested in all aspects of music production.
+      </p>
+      <p>
+        <a href="#join">✦ JOIN MPC ✦</a>
+      </p>
+      <img src="assets/images/showcase2.jpeg" />
+      <h2 id="join">JOIN MPC</h2>
+      <div class="join-links">
+        {% for item in site.data.mpc_links %}
+          <p><a href="{{ item.url }}">✦ {{ item.text | upcase }} ✦</a></p>
+        {% endfor %}
+        <p class="bounce">▼</p>
+      </div>
+
+      <img src="assets/images/showcase3.jpeg" />
+      
+      <span class="anchor" id="artists"></span>
+      <h2>ARTISTS</h2>
+      <p>
+        Are you a musician at MIT? <a style="display: inline-block" href="#footer">✦ Let us know ✦</a> and we'll add you to our list.
+      </p>
+      <div class="artists" id="artists-list">
+        {% for artist in site.data.artists %}
+          {% include artist_box.html name=artist.name
+          link1text=artist.link1text
+          link1url=artist.link1url
+          link2text=artist.link2text
+          link2url=artist.link2url
+          embed=artist.embed
+          imgsrc=artist.imgsrc
+          %}
+        {% endfor %}
+      </div>
+      <footer id="footer">
+        <p>contact: mit-mp<!-- abc@def -->c-exec@mit<!-- @abc.com -->t.edu</p>
+        <p><a href="/site">✦ old website ✦</a></p>
+        <p><a href="https://github.com/richardliutl/mpc">✦ source code ✦</a></p>
+        <p>&copy; MIT Music Production Collaborative {{ site.time | date: "%Y" }}</p>
+      </footer>
+    </div>
+    <script>
+      const artistsList = document.querySelector("#artists-list");
+      for (let i = artistsList.children.length; i >= 0; i--) {
+        artistsList.appendChild(artistsList.children[Math.random() * i | 0]);
+      }
+    </script>
+  </body>
+</html>
