@@ -70,12 +70,13 @@
       </div>
       <footer id="footer">
         <p>contact: mit-mp<!-- abc@def -->c-exec@mit<!-- @abc.com -->t.edu</p>
-        <p><a href="/site">✦ old website ✦</a></p>
-        <p><a href="https://github.com/richardliutl/mpc">✦ source code ✦</a></p>
+        <p><a href="/old">✦ old website ✦</a></p>
+        <p><a href="https://github.com/reeceyang/mpc">✦ source code ✦</a></p>
         <p>&copy; MIT Music Production Collaborative {{ site.time | date: "%Y" }}</p>
       </footer>
     </div>
     <script>
+      // randomize the order in which artists are displayed
       const artistsList = document.querySelector("#artists-list");
       for (let i = artistsList.children.length; i >= 0; i--) {
         artistsList.appendChild(artistsList.children[Math.random() * i | 0]);

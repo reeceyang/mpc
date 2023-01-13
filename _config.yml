@@ -1,3 +1,5 @@
+destination: site 
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
