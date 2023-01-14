@@ -2,6 +2,15 @@
 
 $mpc-red: #EF3E36;
 
+html {
+	scroll-behavior: smooth;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
 body {
   background-color: $mpc-red;
 }
@@ -12,6 +21,8 @@ h1 {
   margin: auto;
   line-height: 38vw;
   height: min-content;
+  width: min-content;
+  overflow: hidden;
 }
 
 a, a:visited  {
@@ -177,8 +188,7 @@ iframe {
 }
 
 footer {
-  width: min-content;
-  white-space: nowrap;
+  max-width: 50em;
   margin: auto;
   text-align: center;
   padding-top: 5em;

@@ -3,6 +3,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  {% seo %}
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,7 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Audiowide&family=Exo+2&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
     {% include marquee.html %}
@@ -54,7 +55,7 @@
       <span class="anchor" id="artists"></span>
       <h2>ARTISTS</h2>
       <p>
-        Are you a musician at MIT? <a style="display: inline-block" href="#footer">✦ Let us know ✦</a> and we'll add you to our list.
+        Are you a musician at MIT? <a style="display: inline-block" href="#footer">✦ Email us ✦</a> and we'll add you to our list.
       </p>
       <div class="artists" id="artists-list">
         {% for artist in site.data.artists %}
@@ -69,7 +70,7 @@
         {% endfor %}
       </div>
       <footer id="footer">
-        <p>contact: mit-mp<!-- abc@def -->c-exec@mit<!-- @abc.com -->t.edu</p>
+        <p>contact: mit-mp<!-- abc@def -->c-exec@mi<!-- @abc.com -->t.edu</p>
         <p><a href="/old">✦ old website ✦</a></p>
         <p><a href="https://github.com/reeceyang/mpc">✦ source code ✦</a></p>
         <p>&copy; MIT Music Production Collaborative {{ site.time | date: "%Y" }}</p>

@@ -3,7 +3,6 @@
 }
 * {
   margin: 0;
-  overflow-wrap: break-word;
 }
 html, body {
   height: 100%;

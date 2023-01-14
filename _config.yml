@@ -6,3 +6,15 @@ plugins:
   - jekyll-seo-tag
 
 exclude: [tools.sh, update.sh, README.md]
+
+title: MIT MPC
+tagline: MIT Music Production Collaborative 
+description: We promote the collaboration, education, and exchange of ideas among MIT community members interested in all aspects of music production. 
+logo: /android-chrome-512x512.png
+social:
+  name: MIT Music Production Collaborative
+  links:
+    - https://soundcloud.com/mitmpc
+    - https://www.youtube.com/channel/UCdNbfFqR2fOmhqspw8TwEQA
+    - https://www.instagram.com/mitmpc/
+    - https://www.facebook.com/MITMPC
