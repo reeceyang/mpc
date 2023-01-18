@@ -3,9 +3,16 @@
     <img src="{{ include.imgsrc }} ">
     <div> 
       <span>{{ include.name }}</span>
-      <p><a href="{{ include.link1url }}">✦ {{ include.link1text }} ✦</a></p>
-      <p><a href="{{ include.link2url }}">✦ {{ include.link2text }} ✦</a></p>
+      {% if include.link1url and include.link1url != '' %}
+        <p><a href="{{ include.link1url }}">✦ {{ include.link1text }} ✦</a></p>
+      {% endif %}
+      {% if include.link2url and include.link2url != '' %}
+        <p><a href="{{ include.link2url }}">✦ {{ include.link2text }} ✦</a></p>
+      {% endif %}
     </div>
   </div>
-  <iframe scrolling="no" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" src="{{ include.embed }}" frameborder="no" loading="lazy"></iframe>
+  {% if include.embed and include.embed != '' %}
+    <iframe scrolling="no" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" src="{{ include.embed }}" frameborder="no" loading="lazy"></iframe>
+  {% endif %}
+
 </div>
