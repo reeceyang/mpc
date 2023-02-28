@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>/</loc>
+<loc>http://localhost:4000/</loc>
 </url>
 <url>
-<loc>/old/</loc>
-<lastmod>2023-01-11T20:14:47-06:00</lastmod>
+<loc>http://localhost:4000/old/</loc>
+<lastmod>2023-01-11T21:14:47-05:00</lastmod>
 </url>
 <url>
-<loc>/old/news.html</loc>
-<lastmod>2023-01-11T20:14:47-06:00</lastmod>
+<loc>http://localhost:4000/old/news.html</loc>
+<lastmod>2023-01-11T21:14:47-05:00</lastmod>
 </url>
 <url>
-<loc>/old/webmaster/links.html</loc>
-<lastmod>2023-01-11T20:14:47-06:00</lastmod>
+<loc>http://localhost:4000/old/webmaster/links.html</loc>
+<lastmod>2023-01-11T21:14:47-05:00</lastmod>
 </url>
 </urlset>
