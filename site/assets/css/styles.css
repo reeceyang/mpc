@@ -97,7 +97,9 @@ a:hover {
 .body-wrapper {
   background-color: black;
   min-height: 100vh;
-  font-family: "Ubuntu", sans-serif;
+  font-family: interstate, sans-serif;
+  font-weight: 500;
+  font-style: normal;
   color: white;
   font-size: 16pt;
 }
